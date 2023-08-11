@@ -1,0 +1,63 @@
+.header,
+.main,
+.nav,
+.aside,
+.advertise,
+.footer {
+  padding: 30px;
+  border-radius: 5px;
+  background-color: rgb(255, 215, 154);
+  border: 2px solid rgb(253, 147, 54);
+}
+.header {
+  grid-area: header;
+}
+.main {
+  grid-area: main;
+}
+.nav {
+  grid-area: nav;
+}
+.aside {
+  grid-area: aside;
+}
+.advertise {
+  grid-area: advertise;
+}
+.footer {
+  grid-area: footer;
+}
+.container {
+  display: grid;
+  grid-template-areas:
+    "header  header header header"
+    "nav     main   main   aside"
+    "nav     main   main   advertise"
+    "footer  footer footer footer";
+  gap: 20px;
+}
+/* small device */
+@media screen and (max-width: 576px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "advertise"
+      "footer";
+  }
+}
+/* medium device */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "header header header"
+      "nav    main   main"
+      "nav    main   main"
+      "nav    main   main"
+      "aside  aside  aside"
+      "advertise advertise advertise"
+      "footer footer footer";
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 150px);
+        grid-template-rows: repeat(3, 150px) 30px 30px;
+        gap: 20px;
+      }
+      #id-1 {
+        grid-row: span 5;
+      }
+      #id-11,
+      #id-12 {
+        grid-column: span 3;
+      }
+
+      .item {
+        background-color: cadetblue;
+
+        border: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item" id="id-1">Box-1</div>
+      <div class="item" id="id-2">Box-2</div>
+      <div class="item" id="id-3">Box-3</div>
+      <div class="item" id="id-4">Box-4</div>
+      <div class="item" id="id-5">Box-5</div>
+      <div class="item" id="id-6">Box-6</div>
+      <div class="item" id="id-7">Box-7</div>
+      <div class="item" id="id-8">Box-8</div>
+      <div class="item" id="id-9">Box-9</div>
+      <div class="item" id="id-10">Box-10</div>
+      <div class="item" id="id-11">Box-11</div>
+      <div class="item" id="id-12">Box-12</div>
+    </div>
+  </body>
+</html>
